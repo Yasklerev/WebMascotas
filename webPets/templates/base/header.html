@@ -1,0 +1,225 @@
+{% extends "base/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    {% block header %}
+
+    <div class="header-one">
+      <div class="header-one-left">
+        <p class="text-header-one-title">
+          TodoMascotas <i class="material-icons">pets</i>
+        </p>
+      </div>
+      <div class="header-one-center">
+        <p class="text-header-one">
+          Whatsapp: +56 9 44567783 / Correo electrónico:
+          Mascotas@TodoMascotas.cl
+        </p>
+      </div>
+
+      <div class="header-one-right">
+        <a class="btn black buttons-header-one button-menu hvr" href="/newUser"
+          ><i class="material-icons left">face</i>Registrarse</a
+        >
+
+        <a
+          class="btn black buttons-header-one button-menu hvr"
+          href="{% url 'login' %}"
+          ><i class="material-icons left">login</i>Iniciar sesión</a
+        >
+      </div>
+    </div>
+
+    <nav class="light-blue darken-4">
+      <a
+        href="#"
+        data-target="slide-out"
+        class="sidenav-trigger show-on-medium-and-up"
+        ><i class="material-icons left">menu</i>Menú</a
+      >
+
+      <a href="#" class="btn-large light-blue darken-3 button-menu-end hvr"
+        >Ofertas <i class="material-icons left">local_offer</i></a
+      >
+      <a
+        href="#"
+        data-target="dropdown1"
+        class="dropdown-trigger btn-large light-blue darken-3 button-menu hvr"
+        ><i class="material-icons left">dashboard</i> Productos</a
+      >
+      <a href="#" class="btn-large light-blue darken-3 button-menu hvr"
+        ><i class="material-icons left">pets</i> Alimentos</a
+      >
+      <a href="#" class="btn-large light-blue darken-3 button-menu hvr"
+        ><i class="material-icons left">email</i>Contacto</a
+      >
+    </nav>
+
+    <ul id="dropdown1" class="dropdown-content">
+      <div class="row">
+        <h5 class="title-dropdown">Nuestros productos</h5>
+        <div class="dropdown-left1">
+          <li class="hover-subtitle-dropdown">
+            <p class="subtitle-dropdown">
+              <i class="material-icons icons-sub-menu">local_hospital</i> Salud
+              y bienestar
+            </p>
+          </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li><a class="hvr-drp" href="#!">Arena de gato</a></li>
+          <li><a class="hvr-drp" href="#!">Control de parásitos</a></li>
+          <li><a class="hvr-drp" href="#!">Medicamentos</a></li>
+          <li><a class="hvr-drp" href="#!">Nutrición</a></li>
+        </div>
+        <div class="dropdown-left2">
+          <li class="hover-subtitle-dropdown">
+            <p class="subtitle-dropdown">
+              <i class="material-icons icons-sub-menu">checkroom</i> Vestuario y
+              Accesorios
+            </p>
+          </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li><a class="hvr-drp" href="#!">Polerones-Chaquetas</a></li>
+          <li><a class="hvr-drp" href="#!">Disfraces</a></li>
+          <li><a class="hvr-drp" href="#!">Accesorios</a></li>
+          <li><a class="hvr-drp" href="#!">Zapatos</a></li>
+        </div>
+        <div class="dropdown-center">
+          <li class="hover-subtitle-dropdown">
+            <p class="subtitle-dropdown">
+              <i class="material-icons icons-sub-menu">sports_cricket</i>
+              Entretención
+            </p>
+          </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li><a class="hvr-drp" href="#!">Perros</a></li>
+          <li><a class="hvr-drp" href="#!">Gatos</a></li>
+        </div>
+        <div class="dropdown-right1">
+          <li class="hover-subtitle-dropdown">
+            <p class="subtitle-dropdown">
+              <i class="material-icons icons-sub-menu">night_shelter</i> Camas y
+              estar
+            </p>
+          </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li><a class="hvr-drp" href="#!">Rascadores</a></li>
+          <li><a class="hvr-drp" href="#!">Camas</a></li>
+        </div>
+        <div class="dropdown-right2">
+          <li class="hover-subtitle-dropdown">
+            <p class="subtitle-dropdown">
+              <i class="material-icons icons-sub-menu">pets</i> Alimentación
+            </p>
+          </li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li class="divider"></li>
+          <li><a class="hvr-drp" href="#!">Platos</a></li>
+          <li><a class="hvr-drp" href="#!">Bebederos</a></li>
+        </div>
+      </div>
+    </ul>
+
+    <!-- Inicio menú lateral del usuario -->
+
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img class="img1" src="/static/img/perfil1.png" />
+          </div>
+          <a href="#user"
+            ><img class="img2" class="circle" src="/static/img/person1.png"
+          /></a>
+          <a href="#name"><span class="white-text name">María Daniela</span></a>
+          <a href="#email"
+            ><span class="white-text email">mari_dani_25@gmail.com</span></a
+          >
+        </div>
+      </li>
+      <li>
+        <a href="#!">
+          <i class="material-icons left">person</i> Usuario cliente</a
+        >
+      </li>
+      <li><div class="divider"></div></li>
+      <li class="hover-item-menu">
+        <a href="/home"><i class="material-icons left">home</i> Inicio</a>
+      </li>
+      <li class="hover-item-menu">
+        <a href="/userPerfil"
+          ><i class="material-icons left">account_box</i> Perfil</a
+        >
+      </li>
+      <li class="hover-item-menu">
+        <a href="/shoppingCart">
+          <i class="material-icons left">shopping_cart</i> Mi carrito de
+          compras</a
+        >
+      </li>
+      <li class="hover-item-menu">
+        <a href="/paymentHistory">
+          <i class="material-icons left">history</i> Historial de compras</a
+        >
+      </li>
+      <li class="hover-item-menu">
+        <a href="/paymentMethod">
+          <i class="material-icons left">payment</i> Medios de pago</a
+        >
+      </li>
+      <li class="hover-item-menu">
+        <a href="{% url 'logout' %}">
+          <i class="material-icons left">exit_to_app</i> Cerrar sesión</a
+        >
+      </li>
+      <li><div class="divider"></div></li>
+      <li>
+        <a href="#!">
+          <i class="material-icons left">person</i> Usuario Administrador</a
+        >
+      </li>
+      <li><div class="divider"></div></li>
+      <li class="hover-item-menu">
+        <a href="{% url 'listMedicines' %}">
+          <i class="material-icons left">add_circle</i>Gestión de medicinas</a
+        >
+      </li>
+      <li class="hover-item-menu">
+        <a href="/listProducts">
+          <i class="material-icons left">list</i> Gestión de juguetes
+        </a>
+      </li>
+      <li class="hover-item-menu">
+        <a href="#!">
+          <i class="material-icons left">fact_check</i> Gestión de vestimentas
+        </a>
+      </li>
+      <li class="hover-item-menu">
+        <a href="#!">
+          <i class="material-icons left">fact_check</i> Gestión de comida
+        </a>
+      </li>
+    </ul>
+
+    <!-- Fin menú lateral del usuario -->
+
+    {% endblock header %}
+
+    <!--contenido-->
+
+    {% block content %} {% endblock content %}
+
+    <!--footer-->
+
+    {% block footer %} {% endblock footer %}
+  </body>
+</html>

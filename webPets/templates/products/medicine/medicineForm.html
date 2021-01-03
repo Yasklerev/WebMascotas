@@ -1,0 +1,26 @@
+{% extends "base/base.html" %}
+
+<!-- contenido -->
+
+{% block content %}
+
+<div class="row">
+  <div class="container">
+    <div class="card card-add-product">
+      <div class="card-title">Agregar nueva medicina</div>
+      <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <!-- validacion de la medicina -->
+
+        <button
+          class="btn blue darken-3"
+          onclick="M.toast({html: 'Nueva medicina creada satisfactoriamente!'})"
+        >
+          Agregar nueva medicina
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

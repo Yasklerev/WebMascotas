@@ -1,0 +1,110 @@
+{% extends "base/base.html" %}
+
+<!-- -->
+{% block content %}
+
+<div class="cart-main">
+  <div class="cart-left">
+    <div class="title-main-shopping">
+      <p>3 productos en el carrito</p>
+    </div>
+
+    <div class="col s12">
+      <div class="card horizontal cards-carts">
+        <div class="card-image">
+          <img
+            class="img-cards-cart"
+            src="/static/img/products/camaGato1.png"
+          />
+        </div>
+        <div class="card-stacked">
+          <div class="card-title title-products-cart">
+            Cama para gatos $ 10.990
+          </div>
+          <div class="card-content">
+            <p>
+              Refugio perfecto para que tu gato pueda descansar, observar su
+              entorno y jugar. Fabricado con madera de densidad media de alta
+              calidad, telas resistentes a los arañazos y cojines de espuma
+              viscoelástica. Es muy fácil de limpiar. Altura: 48cm; Ancho: 43cm
+              y Profundidad: 43cm
+            </p>
+            <button class="btn-small btn-shopping-delete">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12">
+      <div class="card horizontal cards-carts">
+        <div class="card-image">
+          <img
+            class="img-cards-cart"
+            src="/static/img/products/bolaInteractivaGato1.png"
+          />
+        </div>
+        <div class="card-stacked">
+          <div class="card-title title-products-cart">
+            Bola interactiva para gatos $5.990
+          </div>
+          <div class="card-content">
+            <p>
+              Juega con tu felino con nuestro Smart Interactive Electronic
+              Motion Cat Ball Toy . Este impredecible juego de escondite está
+              diseñado específicamente para fomentar el juego independiente para
+              gatos de todas las edades.
+            </p>
+            <button class="btn-small btn-shopping-delete">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12">
+      <div class="card horizontal cards-carts">
+        <div class="card-image">
+          <img
+            class="img-cards-cart"
+            src="/static/img/products/ChalecoPerro1.png"
+          />
+        </div>
+        <div class="card-stacked">
+          <div class="card-title title-products-cart">
+            Impermeable verde para perros $8.990
+          </div>
+          <div class="card-content">
+            <p>
+              Las parkas GFPet poseen un sistema de ajuste elasticado al cuerpo
+              de tu mascota, llamado «elastofit», que permite un calce perfecto
+              y muy cómodo para tu perro. El modelo de impermeable es
+              reversible, reflectante y la capucha tiene enganche. Máxima
+              seguridad, comodidad y mucho estilo!
+            </p>
+            <button class="btn-small btn-shopping-delete">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-right">
+    <div class="card card-total-shopping">
+      <div class="card-title title-pay-shopping">Total: $ 25.970</div>
+      <div class="card-content">
+        <p class="text-shopping">Descuentos: Ninguno</p>
+
+        <div class="input-field input-shopping">
+          <div class="input-shopping-left">
+            <input type="text" placeholder="Introducir cupón: " />
+          </div>
+
+          <div class="input-shopping-right">
+            <button class="btn-small btn-shopping-pay">Aplicar</button>
+          </div>
+        </div>
+
+        <button class="btn btn-shopping-pay1">Pagar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

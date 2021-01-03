@@ -1,0 +1,23 @@
+{% extends "base/base.html" %} {% block content %}
+
+<div class="row">
+  <div class="container">
+    <div class="card card-login">
+      <div class="card-title">Inicio de sesión</div>
+      <div class="card-content">
+        <form class="form-login">
+          <input type="text" placeholder="Correo electrónico" />
+          <input type="password" placeholder="Contraseña" />
+          <a
+            href="/home"
+            class="btn blue darken-3"
+            onclick="M.toast({html: 'inicio de sesión exitoso!'})"
+            >Ingresar</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends "base/base.html" %}
+
+<!-- contenido -->
+
+{% block content %}
+
+<div class="row">
+  <div class="container">
+    <div class="card card-delete">
+      <form method="POST">
+        {% csrf_token %}
+
+        <div class="card-title">
+          <small class="product-delete-select"
+            >¿Esta seguro que desea eliminar este producto?</small
+          >
+        </div>
+        <hr />
+
+        <div class="card card-delete-product">
+          <card-title> Datos del producto: </card-title>
+          <div class="card-content">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre del producto:</th>
+                  <th>Tipo de mascota:</th>
+                  <th>Tipo de producto:</th>
+                  <th>Descripción del producto:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ product.name_product }}</td>
+                  <td>{{ product.type_of_pet }}</td>
+                  <td>{{ product.type_of_product }}</td>
+                  <td>{{ product.description }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-action">
+            <div class="actions-delete">
+              <button
+                class="btn-small red darken-2"
+                type="submit"
+                onclick="M.toast({html: 'Producto eliminado satisfactoriamente!'})"
+              >
+                Eliminar
+              </button>
+              <a class="btn-small blue darken-2" href="{% url 'listProducts' %}"
+                >Volver</a
+              >
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--script>
+  M.toast({
+    html: "Producto eliminado",
+    classes: "red",
+  });
+</script-->
+
+{% endblock content %}

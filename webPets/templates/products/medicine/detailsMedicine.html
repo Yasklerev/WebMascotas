@@ -1,0 +1,42 @@
+{% extends "base/base.html" %}
+
+<!-- contenido -->
+
+{% block content %}
+
+<div class="row">
+  <div class="card card-delete">
+    <div class="card-title">
+      <span class="product-delete-select"
+        >Nombre de la medicina seleccionada: {{ medicine.name_medicine }}</span
+      >
+    </div>
+
+    <div class="card-content">
+      <hr />
+      <div class="space-left-details">
+        <p>Resumen de la medicina: {{ medicine.resume }}</p>
+        <p>dasdasdasaadsa</p>
+        <p>Tipo de mascota: {{ medicine.type_of_pet }}</p>
+        <p>Cantidad de dosis: {{ medicine.amount_dose }}</p>
+      </div>
+      <div class="space-right-details">
+        <p>Descripción de la medicina: {{ medicine.description }}</p>
+        <p>Tipo de medicina: {{ medicine.type_of_medicine }}</p>
+        <p>Valor medicina: {{ medicine.medicine_cost }}</p>
+      </div>
+    </div>
+    <div class="card-action">
+      <a href="#">This is a link</a>
+    </div>
+  </div>
+</div>
+
+<!--script>
+  M.toast({
+    html: "Producto eliminado",
+    classes: "red",
+  });
+</script-->
+
+{% endblock content %}

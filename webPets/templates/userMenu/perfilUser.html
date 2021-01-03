@@ -1,0 +1,66 @@
+{% extends "base/base.html" %}
+
+<!-- contenido -->
+
+{% block content %}
+
+<div class="row">
+  <div class="container">
+    <div class="perfil-user-edit">
+      <div class="perfil-edit-left">
+        <h4>Avatar</h4>
+        <img
+          class="image-avatar-background"
+          src="/static/img/perfil1.png"
+          alt=""
+        />
+        <img class="image-avatar" src="/static/img/person1.png" alt="" />
+
+        <div class="options-edit-perfil">
+          <table class="menu-edit">
+            <thead>
+              <tr>
+                <th class="hover-item-menu-edit">Avatar</th>
+              </tr>
+              <tr>
+                <th class="hover-item-menu-edit">Imagen de fondo</th>
+              </tr>
+              <tr>
+                <th class="hover-item-menu-edit">
+                  Medios de pagos registrados
+                </th>
+              </tr>
+              <tr>
+                <th class="hover-item-menu-edit">Cerrar cuenta</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="perfil-edit-right">
+        <h4>Perfil público</h4>
+        <form>
+          <div class="input-field col s12 input-edit">
+            <input type="text" value="María Daniela" />
+            <label>Nombre de usuario</label>
+          </div>
+          <div class="input-field col s12 input-edit">
+            <input type="text" value="mari_dani_25@gmail.com" />
+            <label>Correo electrónico</label>
+          </div>
+          <div class="input-field col s12 input-edit">
+            <input type="password" />
+            <label>Nueva contraseña</label>
+          </div>
+          <div class="input-field col s12 input-edit">
+            <input type="password" />
+            <label>Confirmar contraseña</label>
+          </div>
+          <a href="" class="btn btn-edit blue darken-2">Guardar cambios</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

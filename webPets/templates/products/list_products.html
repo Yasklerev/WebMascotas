@@ -1,0 +1,61 @@
+{% extends "base/base.html" %}
+
+<!-- comtenido -->
+
+{% block content %}
+
+<div class="row">
+  <div class="container">
+    <h3>Lista de productos</h3>
+    <a
+      href="/addProducts"
+      class="btn-floating btn-small blue darken-2 add-product-list"
+      ><i class="material-icons">add</i></a
+    >
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre del producto</th>
+          <th>Tipo de mascota</th>
+          <th>Tipo de producto</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if products %}
+        <!-- Inicio ciclo for -->
+        {% for product in products %}
+        <tr>
+          <td>{{ product.id }}</td>
+          <td>{{ product.name_product }}</td>
+          <td>{{ product.type_of_pet }}</td>
+          <td>{{ product.type_of_product }}</td>
+          <td>{{ product.description }}</td>
+          <td>
+            <a
+              href="{% url 'editProduct' product.id %}"
+              class="btn-floating btn-small blue darken-2"
+              ><i class="material-icons">create</i></a
+            >
+            <a
+              href="{% url 'deleteProduct' product.id %}"
+              class="btn-floating btn-small blue darken-2"
+              ><i class="material-icons">delete</i></a
+            >
+          </td>
+        </tr>
+        {% endfor %}
+        <!-- Fin ciclo for -->
+        {% else %}
+        <h1>No hay registros en nuestra base de datos!</h1>
+        <!-- se cierra el if -->
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- fin contenido -->
+{% endblock content %}
